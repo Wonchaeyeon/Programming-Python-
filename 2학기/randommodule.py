@@ -7,6 +7,10 @@ print()
 print("시작값 2.5 이상 끝값 10.0 미만 실수 값")
 print("random.uniform(2.5, 10.0) :", random.uniform(2.5,10.0))
 print()
+print("100 이상 999 이하 정수 값")
+print("random.randint(100,999) : ",random.randint(100,999))
+print()  #얘는 999도 포함.
+#random.randrange(100,999)  100이상 999미만 정수 random값
 print("0 이상 끝값 10 미만 정수 값")
 print("random.randrange(10) : ",random.randrange(10))
 print()
