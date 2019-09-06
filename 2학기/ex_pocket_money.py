@@ -6,13 +6,13 @@ k=int(input("국어 점수를 입력하세요: "))
 e=int(input("영어 점수를 입력하세요: "))
 m=int(input("수학 점수를 입력하세요: "))
 ja=int(input("자바 점수를 입력하세요: "))
-pyt=int(input("파이썬 점수를 입력하세요: "))
+p=int(input("파이썬 점수를 입력하세요: "))
 jsp=int(input("JSP 점수를 입력하세요: "))
 
-sum=k+e+m+ja+pyt+jsp
-avg=sum/6
+sum=(k+e+m+ja+p+jsp)
+avg=(sum/6)
 
-print("총점은:",sum,"평균은:",avg)
+print("총점은:",sum,"평균은:",round(avg,2))
 
 if avg >=90: 
     print("용돈 10만원")
