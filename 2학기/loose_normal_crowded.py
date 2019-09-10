@@ -2,13 +2,17 @@
 #탑승객, 하차객 입력받자
 #0명 이상 10 미만 : 여유, 10명이상 20명 미만: 보통, 20이상: 혼잡
 
+sum=0
+
 #--------반복하기
 while True:
-    inn=int(input("탑승객 수는?:"))
-    out = int(input("하차객 수는?:"))
-    sum = inn-out
-    if inn == -1:
+    inn=input("탑승객 수는?: (-1: 끝): ")
+    if inn == "-1":
         break
+    inn = int(inn)
+    out = int(input("하차객 수는?:"))
+    sum += inn-out
+
 #----
 
 print("버스에 있는 사람수는",sum)
