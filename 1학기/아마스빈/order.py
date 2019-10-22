@@ -31,7 +31,7 @@ class order:
             if self.order == "":  #메뉴선택 안하고 그냥 엔터치면 주문 끝
                 break
             if int(self.order)==0:
-                drink = Coffe("아메리카노",1800)
+                drink = Coffee("아메리카노",1800)
             elif int(self.order)==1:
                 drink = Bubbletea("딸기요거트",3500)
             #음료옵션정하자
