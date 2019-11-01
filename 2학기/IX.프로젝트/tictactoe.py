@@ -12,6 +12,8 @@ class TicTacToe:
             self.current_turn="X" if self.current_turn =="O" else "O"  #만약 O면 X를 넣고, O면 그냥 O를 넣어라.
                               #여기 "X"부터 뒤까지가 먼저 해석. (위에 4줄이랑 같은 말임)
             self.board[(row * 3)+col]=self.current_turn
+        else:
+            print("빈칸이 아니에요, 제대로 잘 입력해요.")
     def get(self,row,col):
         return self.board[(row*3)+col]   #row의 1차원 보드 값 바뀌게 하는것
 
