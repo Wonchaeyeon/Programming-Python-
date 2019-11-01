@@ -5,7 +5,7 @@ class Account:     #개인 계좌 관리
         self.name=input("고객이름=")
         self.balance=input("예금금액=")
 
-    def disp(self):
+    def disp(self):  #입금
         print("{0} :{1} :{2}".format(self.user,self.name,self.balance))
     def getid(self):
         return self.user
