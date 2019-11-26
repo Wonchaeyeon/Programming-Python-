@@ -12,7 +12,7 @@ if __name__ == '__main__':
     # print(soup)
     cartoon_titles=soup.find_all("td",attrs={"class":"title"})    #<td class="title">
     html="<html><head><meta charset='utf-8'></head><body>"
-    for title in cartoon_titles:        #find는 하나만 가져옴. find_all은 리스트를 다 가져오는 것임
+    for title in cartoon_titles[:]:        #find는 하나만 가져옴. find_all은 리스트를 다 가져오는 것임
         t=title.find("a").text          #제목 가져오자
         link=title.find("a").get("href")    #링크 가져오자
         link = "https://comic.naver.com/"+link
@@ -23,5 +23,5 @@ if __name__ == '__main__':
     html+="</body></html>"
     outputSoup=BeautifulSoup(html,"lxml")       #html
     prettyHtml=str(outputSoup.prettify())
-    with open("유미의세포들.html","w",encoding="utf-8") as f:
+    with open("여신강림.html","w",encoding="utf-8") as f:
         f.write(prettyHtml)
