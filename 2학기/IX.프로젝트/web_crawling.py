@@ -7,8 +7,13 @@ from urllib.request import urlopen  #url에 해당하는 html 가져오자.
 if __name__ == '__main__':
    # 네이버 웹툰 > 신의탐 제목 가져오자
    #  data=urlopen("https://comic.naver.com/webtoon/list.nhn?titleId=183559&weekday=mon")  
-    data=urlopen("https://comic.naver.com/webtoon/list.nhn?titleId=703846&weekday=tue")  #여신강림
-    soup=BeautifulSoup(data,"lxml")
+   #  data=urlopen("https://comic.naver.com/webtoon/list.nhn?titleId=703846&weekday=tue")  #여신강림
+   #  soup=BeautifulSoup(data,"lxml")
+   #  data.close()
+
+    with urlopen("https://comic.naver.com/webtoon/list.nhn?titleId=703846&weekday=tue") as data:
+        soup = BeautifulSoup(data,"lxml")
+
     # print(soup)
     cartoon_titles=soup.find_all("td",attrs={"class":"title"})    #<td class="title">
     html="<html><head><meta charset='utf-8'></head><body>"
