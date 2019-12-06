@@ -18,11 +18,69 @@ if __name__ == '__main__':
     # pag.drag(0,200,duration=1)    #드래그 duration있어야 함. 
     # pag.rightClick()  #오른쪽 버튼 
     # pag.click(484,44, dutation=1)
-     pag.doubleClick(166,44,duration=2)
+    #  pag.doubleClick(166,44,duration=2)
+     # time.sleep(1)  #크롬이 열리기를 기다려야힘.
+     # pag.press("hangul")
+     # pag.typewrite("http://ticket.interpark.com/")
+     # pag.press("enter")
+     # pag.press("hangul")  #한/영키
+     # pag.typewrite("dkdldb")  #아이유 영어로
+     # pag.press("enter")
+
+
     #TODO:scroll
-     time.sleep(1)  #크롬이 열리기를 기다려야힘.
-     pag.typewrite("http://ticket.interpark.com/")
-     pag.press("enter")
-     # pag.press("hangul")  #한/영키 
-     # pag.typewrite("dkdldb")  #아이유 영어로    
-     # pag.press("enter")   
+     pag.hotkey("Alt","Tab")
+     time.sleep(2)
+     pag.scroll(clicks=-200,x=963,y=485)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
